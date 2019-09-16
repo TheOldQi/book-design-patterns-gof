@@ -1,5 +1,8 @@
 package com.qixiafei.book.design.patterns.gof.af;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <P>Description: . </P>
  * <P>CALLED BY:   齐霞飞 </P>
@@ -14,23 +17,28 @@ package com.qixiafei.book.design.patterns.gof.af;
 public class Client {
 
     public static void main(String[] args) {
-        final Factory dog = new DogFactory();
-        dog.getFoot();
-        dog.getHand();
-        dog.getHead();
-        final Factory cow = new CowFactory();
-        cow.getFoot();
-        cow.getHand();
-        cow.getHead();
-        final Factory bull = new BullFactory();
-        bull.getFoot();
-        bull.getHand();
-        bull.getHead();
-        final Factory horse = new HorseFactory();
-        horse.getFoot();
-        horse.getHand();
-        horse.getHead();
-
+//        Factory factory = new DogFactory();
+//        factory.getFoot();
+//        factory.getHand();
+//        factory.getHead();
+//        factory = new CowFactory();
+//        factory.getFoot();
+//        factory.getHand();
+//        factory.getHead();
+//        factory = new BullFactory();
+//        factory.getFoot();
+//        factory.getHand();
+//        factory.getHead();
+//        factory = new HorseFactory();
+//        factory.getFoot();
+//        factory.getHand();
+//        factory.getHead();
+        final List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        List<Integer> integers = list.subList(0, 9);
+        System.out.println(integers);
 
     }
 }
